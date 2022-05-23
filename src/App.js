@@ -6,7 +6,7 @@ import Navbar from './Shared/Navbar';
 
 function App() {
   return (
-    <div className='max-w-7xl mx-auto px-10'>
+    <div className='max-w-7xl mx-auto px-6'>
 
       <Navbar></Navbar>
 
