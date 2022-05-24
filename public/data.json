@@ -1,0 +1,50 @@
+[
+    {
+        "product_name": "BATTERIES",
+        "description": "Truck batteries can lose their charge because of weather, age or simply because the lights were left on. These will get your vehicle started and back on the road.",
+        "price": "$324.00",
+        "image": "https://i.ibb.co/whkS20Y/parts1.webp",
+        "minimum_order_quantity": 17,
+        "available_quantity": 191
+    },
+    {
+        "product_name": "SIDE MIRRORS",
+        "description": "We are leading supplier of TRUCK SIDE MIRRORS. We provide a best quality of product to our client",
+        "price": "$554.76",
+        "image": "https://i.ibb.co/zZYqQcM/parts3.jpg",
+        "minimum_order_quantity": 12,
+        "available_quantity": 127
+    },
+    {
+        "product_name": "DRIVERS SIT ",
+        "description": "Truck drivers often sit for long periods of time, which puts stress on the lower back. We provide a best quality of product to our client",
+        "price": "$780.24",
+        "image": "https://i.ibb.co/Gd9qNx3/parts4.jpg",
+        "minimum_order_quantity": 11,
+        "available_quantity": 38
+    },
+    {
+        "product_name": "Headlight",
+        "description": "Find the best headlight bulbs for trucks at website. We offer a wide variety of LED, HID, & XENON truck light bulbs for most makes & models",
+        "price": "$957.86",
+        "image": "https://i.ibb.co/5F4LgSQ/parts5.webp",
+        "minimum_order_quantity": 13,
+        "available_quantity": 176
+    },
+    {
+        "product_name": "TRUCK WHEEL ",
+        "description": "Truck Parts offers a large selection of truck wheel tire packages for Ford, Dodge, Chevy, and GMC trucks",
+        "price": "$937.01",
+        "image": "https://i.ibb.co/smxmmyn/parts6.jpg",
+        "minimum_order_quantity": 17,
+        "available_quantity": 45
+    },
+    {
+        "product_name": "TRUCK BUMPER ",
+        "description": "Truck bumpers shield a truck's front and tail sections against physical damages. These areas contain some of the most vital components of the truck",
+        "price": "$1,119.84",
+        "image": "https://i.ibb.co/N6zRmTw/parts2.png",
+        "minimum_order_quantity": 11,
+        "available_quantity": 172
+    }
+]

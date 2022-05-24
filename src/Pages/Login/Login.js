@@ -34,12 +34,6 @@ const Login = () => {
         }
     }, [token, from, navigate])
 
-    /* useEffect(() => {
-         if (gUser || user) {
-             //console.log(gUser || user)
-             navigate(from, { replace: true });
-         }
-     }, [user, gUser, from, navigate])*/
 
     if (loading || gLoading) {
         return <Loading></Loading>
@@ -54,9 +48,7 @@ const Login = () => {
         signInWithEmailAndPassword(data.email, data.password)
     }
 
-    // const handlegoogle = () => {
-    //     signInWithGoogle();
-    // }
+
     return (
         <div className='flex justify-center items-center h-screen'>
             <div className="card w-96 bg-base-100 shadow-xl">
