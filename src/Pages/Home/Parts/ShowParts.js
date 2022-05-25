@@ -6,19 +6,19 @@ const ShowParts = ({ part }) => {
     const { _id, product_name, description, price, image, minimum_order_quantity, available_quantity } = part
 
     const handleBuyNow = () => {
-        navigate(`/partsDetais/${_id}`)
+        navigate(`/purchase/${_id}`)
     }
     return (
-        <div class="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl">
             <figure className='w-1/2'><img src={image} alt="part" /></figure>
-            <div class="card-body">
-                <h2 class="card-title">{product_name}</h2>
+            <div className="card-body">
+                <h2 className="card-title">{product_name}</h2>
                 <p>{description}</p>
                 <p>Available: {available_quantity}</p>
                 <p>Minimum Order: {minimum_order_quantity}</p>
                 <p>Price: {price}</p>
-                <div class="card-actions justify-end">
-                    <button onClick={() => handleBuyNow(_id)} class="btn btn-primary">Buy Now</button>
+                <div className="card-actions justify-end">
+                    <button onClick={handleBuyNow} class="btn btn-primary">Buy Now</button>
                 </div>
             </div>
         </div>
