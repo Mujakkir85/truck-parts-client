@@ -1,10 +1,20 @@
+
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import auth from '../../../firebase.init';
 import Loading from '../../../Shared/Loading';
 import './PurchasePart.css';
 
 const PurchasePart = () => {
+
+    const [user] = useAuthState(auth);
+
+    console.log(user);
+
+
 
     const { id } = useParams()
 
@@ -17,17 +27,44 @@ const PurchasePart = () => {
         return <Loading></Loading>
     }
 
-    // const [purchaseItem, setPurchaseItem] = useState({})
+    let minimum = purchaseItem.minimum_order_quantity;
+    let maximu = purchaseItem.available_quantity;
 
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/purchase/${id}`)
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             //console.log(data);
-    //             setPurchaseItem(data)
-    //         }
-    //         )
-    // })
+    const handlepurchase = event => {
+        event.preventDefault();
+
+        let orderQuantity = event.target.order_quantity.value;
+
+        if (orderQuantity < minimum || orderQuantity > maximu) {
+            toast.error(`Quantity should be grater than default value and less than maximum value`)
+        }
+        else {
+            const order = {
+                userEmail: user.email,
+                userName: user.displayName,
+                address: event.target.address.value,
+                phone: event.target.phone.value,
+                orderQuantity: orderQuantity
+            }
+
+            //console.log(order);
+            fetch(`http://localhost:5000/orderparts`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(order)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('add order', data)
+                    toast.success(`Order placed sucessfully`)
+                    event.target.reset();
+                })
+        }
+    }
+
+
 
     return (
         <div className='py-16'>
@@ -42,18 +79,19 @@ const PurchasePart = () => {
                 </div>
             </div>
 
-            <div class="card-width card bg-base-100 shadow-xl my-28">
+            <div class="card-width card bg-base-100 shadow-xl my-28 mx-auto">
                 <div class="card-body">
                     <h2 class="card-title mx-auto">Order Here</h2>
-                    <form>
-                        <div className='d-flex justify-center'>
-                            <input type="text" placeholder="Type here" class="input input-bordered input-warning w-full max-w-xs" />
-                            <input type="text" placeholder="Type here" class="input input-bordered input-warning w-full max-w-xs" />
-                            <input type="text" placeholder="Type here" class="input input-bordered input-warning w-full max-w-xs" />
-                            <input type="text" placeholder="Type here" class="input input-bordered input-warning w-full max-w-xs" />
+                    <form className='mx-auto' onSubmit={handlepurchase}>
+                        <div className=''>
+                            <input type="text" placeholder="Name" class="input input-bordered input-warning w-full max-w-xs  mb-4" disabled value={user.displayName} />
+                            <input type="email" placeholder="Email" class="input input-bordered input-warning w-full max-w-xs mb-4" disabled value={user.email} />
+                            <input type="text" placeholder="Address" required name='address' class="input input-bordered input-warning w-full max-w-xs mb-4" />
+                            <input type="number" placeholder="Phone Number" required name='phone' class="input input-bordered input-warning w-full max-w-xs mb-4" />
+                            <input type="number" placeholder="Order quantity" class="input input-bordered input-warning w-full max-w-xs mb-4" name="order_quantity" defaultValue={minimum} />
                         </div>
-                        <div class="card-actions justify-center">
-                            <button class="btn btn-primary">Buy Now</button>
+                        <div className="card-actions justify-center">
+                            <button type='submit' className="btn btn-primary">Buy Now</button>
                         </div>
                     </form>
                 </div>
