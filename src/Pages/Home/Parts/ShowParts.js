@@ -10,7 +10,7 @@ const ShowParts = ({ part }) => {
     }
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
-            <figure className='w-1/2'><img src={image} alt="part" /></figure>
+            <figure className='w-1/2 mx-auto'><img src={image} alt="part" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{product_name}</h2>
                 <p>{description}</p>

@@ -36,7 +36,6 @@ function App() {
           <Route path='myprofile' element={<Myprofile></Myprofile>}></Route>
         </Route>
 
-
         <Route path='login' element={<Login></Login>}></Route>
         <Route path='signup' element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>

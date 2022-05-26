@@ -14,8 +14,6 @@ const PurchasePart = () => {
 
     console.log(user);
 
-
-
     const { id } = useParams()
 
     console.log(id);
@@ -42,6 +40,7 @@ const PurchasePart = () => {
             const order = {
                 userEmail: user.email,
                 userName: user.displayName,
+                product_name: purchaseItem.product_name,
                 address: event.target.address.value,
                 phone: event.target.phone.value,
                 orderQuantity: orderQuantity
@@ -81,11 +80,12 @@ const PurchasePart = () => {
 
             <div class="card-width card bg-base-100 shadow-xl my-28 mx-auto">
                 <div class="card-body">
-                    <h2 class="card-title mx-auto">Order Here</h2>
+                    <h2 class="card-title mx-auto my-4">Order Here</h2>
                     <form className='mx-auto' onSubmit={handlepurchase}>
-                        <div className=''>
+                        <div className='grid grid-cols-1 w-96 content-center'>
                             <input type="text" placeholder="Name" class="input input-bordered input-warning w-full max-w-xs  mb-4" disabled value={user.displayName} />
                             <input type="email" placeholder="Email" class="input input-bordered input-warning w-full max-w-xs mb-4" disabled value={user.email} />
+                            <input type="text" placeholder="product name" class="input input-bordered input-warning w-full max-w-xs mb-4" disabled value={purchaseItem.product_name} />
                             <input type="text" placeholder="Address" required name='address' class="input input-bordered input-warning w-full max-w-xs mb-4" />
                             <input type="number" placeholder="Phone Number" required name='phone' class="input input-bordered input-warning w-full max-w-xs mb-4" />
                             <input type="number" placeholder="Order quantity" class="input input-bordered input-warning w-full max-w-xs mb-4" name="order_quantity" defaultValue={minimum} />
