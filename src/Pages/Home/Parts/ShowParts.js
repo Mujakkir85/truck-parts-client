@@ -18,7 +18,7 @@ const ShowParts = ({ part }) => {
                 <p>Minimum Order: {minimum_order_quantity}</p>
                 <p>Price: {price}</p>
                 <div className="card-actions justify-end">
-                    <button onClick={handleBuyNow} class="btn btn-primary">Buy Now</button>
+                    <button onClick={handleBuyNow} className="btn btn-primary">Buy Now</button>
                 </div>
             </div>
         </div>
