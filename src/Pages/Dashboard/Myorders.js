@@ -40,7 +40,7 @@ const Myorders = () => {
                     <tbody>
                         {
                             userOrders?.map((userOrder, index) => <MyordersRow
-                                key={userOrders._id}
+                                key={userOrder._id}
                                 userOrder={userOrder}
                                 index={index}
                                 refetch={refetch}
