@@ -37,16 +37,16 @@ const Review = () => {
     }
 
     return (
-        <div class="card-width card bg-base-100 shadow-xl my-4 mx-auto ">
-            <div class="card-body">
-                <h2 class="card-title mx-auto my-4">Add A Review</h2>
+        <div className="card-width card bg-base-100 shadow-xl my-4 mx-auto ">
+            <div className="card-body">
+                <h2 className="card-title mx-auto my-4">Add A Review</h2>
                 <form className='mx-auto' onSubmit={handleReviews}>
                     <div className='grid grid-cols-1 w-96 content-center'>
-                        <input type="text" placeholder="Name" class="input input-bordered input-warning w-full max-w-xs  mb-4" disabled value={user.displayName} />
-                        <input type="email" placeholder="Email" class="input input-bordered input-warning w-full max-w-xs mb-4" disabled value={user.email} />
-                        <input type="text" placeholder="product name" required name='productName' class="input input-bordered input-warning w-full max-w-xs mb-4" />
-                        <input type="text" placeholder="Review Description" required name='description' class="input input-bordered input-warning w-full max-w-xs mb-4" />
-                        <input type="number" placeholder="Rating out of 5" required name='rating' class="input input-bordered input-warning w-full max-w-xs mb-4" />
+                        <input type="text" placeholder="Name" className="input input-bordered input-warning w-full max-w-xs  mb-4" disabled value={user.displayName} />
+                        <input type="email" placeholder="Email" className="input input-bordered input-warning w-full max-w-xs mb-4" disabled value={user.email} />
+                        <input type="text" placeholder="product name" required name='productName' className="input input-bordered input-warning w-full max-w-xs mb-4" />
+                        <input type="text" placeholder="Review Description" required name='description' className="input input-bordered input-warning w-full max-w-xs mb-4" />
+                        <input type="number" placeholder="Rating out of 5" required name='rating' className="input input-bordered input-warning w-full max-w-xs mb-4" />
                     </div>
                     <div className="card-actions justify-center">
                         <button type='submit' className="btn btn-primary">Add Review</button>

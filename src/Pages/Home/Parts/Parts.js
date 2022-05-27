@@ -13,11 +13,13 @@ const Parts = () => {
         return <Loading></Loading>
     }
 
+    const lastSixparts = parts?.slice(-6);
+
     return (
         <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
 
             {
-                parts?.map(part => <ShowParts key={part._id}
+                lastSixparts?.map(part => <ShowParts key={part._id}
                     part={part}
                 ></ShowParts>)
             }
