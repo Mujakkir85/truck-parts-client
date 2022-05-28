@@ -19,6 +19,7 @@ import Blog from './Pages/Blog/Blog';
 import Alluser from './Pages/Dashboard/Alluser';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageProduct from './Pages/Dashboard/ManageProduct';
+import Myportfolio from './Pages/Home/Myportfolio/Myportfolio';
 
 function App() {
   return (
@@ -33,7 +34,6 @@ function App() {
             <PurchasePart></PurchasePart>
           </RequireAuth>}>
         </Route>
-
         <Route path='dashboard' element={
           <RequireAuth> <Dashboard /></RequireAuth>}>
           <Route path='myorders' element={<Myorders></Myorders>}></Route>
@@ -43,6 +43,7 @@ function App() {
           <Route path='addproduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
           <Route path='manageproducts' element={<RequireAdmin><ManageProduct></ManageProduct></RequireAdmin>}></Route>
         </Route>
+        <Route path='portfolio' element={<Myportfolio></Myportfolio>}></Route>
         <Route path='blog' element={<Blog></Blog>}></Route>
         <Route path='login' element={<Login></Login>}></Route>
         <Route path='signup' element={<SignUp></SignUp>}></Route>

@@ -67,7 +67,7 @@ const Myprofile = () => {
                     </div>
                 </form>
             </div>
-        </div> //
+        </div>
     );
 };
 
