@@ -13,8 +13,8 @@ const Myportfolio = () => {
                     <div className="card-body">
                         <h2 className='text-3xl font-bold'>My three website link</h2>
                         <a href="https://furniture-warehouse-455c7.firebaseapp.com/" target="_blank" className='text-xl font-bold'>Website 1 : Furniture Warehouse</a>
-                        <a href="https://wildlife-photographr-7be05.firebaseapp.com/home" target="_blank" className='text-xl font-bold'> Website 2 : Wildlife Photographr</a>
-                        <a href="https://wildlife-photographr-7be05.firebaseapp.com/home" target="_blank" className='text-xl font-bold'> Website 3 : Truck Parts</a>
+                        <a href="https://wildlife-photographr-7be05.firebaseapp.com/" target="_blank" className='text-xl font-bold'> Website 2 : Wildlife Photographr</a>
+                        <a href="https://truck-parts-13fe9.firebaseapp.com/" target="_blank" className='text-xl font-bold'> Website 3 : Truck Parts</a>
 
                     </div>
                 </div>

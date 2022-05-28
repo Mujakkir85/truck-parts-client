@@ -17,7 +17,7 @@ const AddProduct = () => {
         }
 
         console.log(addparts);
-        fetch(`http://localhost:5000/addparts`, {
+        fetch(`https://immense-thicket-82990.herokuapp.com/addparts`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

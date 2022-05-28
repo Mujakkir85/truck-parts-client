@@ -18,7 +18,7 @@ const PurchasePart = () => {
 
     console.log(id);
 
-    const { data: purchaseItem, isLoading, refetch } = useQuery(['purchase', id], () => fetch(`http://localhost:5000/purchase/${id}`)
+    const { data: purchaseItem, isLoading, refetch } = useQuery(['purchase', id], () => fetch(`https://immense-thicket-82990.herokuapp.com/purchase/${id}`)
         .then(res => res.json()))
 
     if (isLoading) {
@@ -47,7 +47,7 @@ const PurchasePart = () => {
             }
 
             //console.log(order);
-            fetch(`http://localhost:5000/orderparts`, {
+            fetch(`https://immense-thicket-82990.herokuapp.com/orderparts`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

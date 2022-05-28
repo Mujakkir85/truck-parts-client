@@ -20,7 +20,7 @@ const Review = () => {
         }
         console.log(review)
 
-        fetch(`http://localhost:5000/addreview`, {
+        fetch(`https://immense-thicket-82990.herokuapp.com/addreview`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

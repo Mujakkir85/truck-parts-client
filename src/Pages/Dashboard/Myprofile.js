@@ -10,7 +10,7 @@ const Myprofile = () => {
 
     const [user] = useAuthState(auth);
 
-    /*const { data: mydata, isLoading, refetch } = useQuery(['singleuser', user.email], () => fetch(`http://localhost:5000/singleuser?email=${user.email}`, {
+    /*const { data: mydata, isLoading, refetch } = useQuery(['singleuser', user.email], () => fetch(`https://immense-thicket-82990.herokuapp.com/singleuser?email=${user.email}`, {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }
@@ -35,7 +35,7 @@ const Myprofile = () => {
         }
         console.log(update)
 
-        fetch(`http://localhost:5000/updateuser/${user.email}`, {
+        fetch(`https://immense-thicket-82990.herokuapp.com/updateuser/${user.email}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

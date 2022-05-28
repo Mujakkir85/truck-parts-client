@@ -6,7 +6,7 @@ import ShowParts from './ShowParts';
 const Parts = () => {
 
     //React query
-    const { data: parts, isLoading, refetch } = useQuery(['parts'], () => fetch(`http://localhost:5000/parts`)
+    const { data: parts, isLoading, refetch } = useQuery(['parts'], () => fetch(`https://immense-thicket-82990.herokuapp.com/parts`)
         .then(res => res.json()))
 
     if (isLoading) {
